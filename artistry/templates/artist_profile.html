@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/artist_profile.css') }}"
+    />
+    <title>{{ artist.name }}</title>
+  </head>
+  <body>
+    <header>
+      <h1>Profile of Artist</h1>
+      <nav>
+        <a href="{{ url_for('index') }}">Home</a>
+        <a href="{{ url_for('shop') }}">Shop</a>
+
+        <a href="{{ url_for('cart') }}">Cart</a>
+      </nav>
+    </header>
+    <main>
+      <div class="artist-profile">
+        <img
+          src="{{ url_for('static', filename='css/images/artist1jpg.jpg') }}"
+          alt="artist1"
+          width="300px"
+        />
+        <h2>{{ artist.name }}</h2>
+        <p>{{ artist.bio }}</p>
+        <h3>Products by {{ artist.name }}</h3>
+        <div class="product-list">
+          {% for product in artist.products %}
+          <div class="product-item">
+            <h4>{{ product.name }}</h4>
+            <p>{{ product.description }}</p>
+            <p>Price: ${{ product.price }}</p>
+            <a href="{{ url_for('product_detail', product_id=product.id) }}"
+              >View Details</a
+            >
+          </div>
+          {% endfor %}
+        </div>
+      </div>
+    </main>
+    <footer>
+      <p>&copy; 2024 Artisan Bazaar. All rights reserved.</p>
+    </footer>
+  </body>
+</html>

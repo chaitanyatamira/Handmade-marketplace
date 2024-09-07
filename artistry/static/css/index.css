@@ -1,0 +1,162 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f9c2a9;
+    margin: 0;
+    padding: 0;
+    
+}
+
+header {
+    background-color: #f98e7d;
+    color: #161515;
+    padding: 1em;
+    text-align: left;
+    font-size: larger;
+}
+
+nav {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: #b0422f; 
+    padding: 10px 0;
+}
+
+nav a {
+    color: #fff;
+    margin: 0 1em;
+    text-decoration: none;
+}
+
+.navbar-nav {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.navbar-nav .nav-item {
+    margin-right: 1em;
+}
+nav a:hover {
+    color: #ff8c00; /* Change color on hover */
+}
+
+.main-banner {
+    position: relative;
+    text-align: center;
+    color: white;
+}
+
+.cta-buttons {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.btn {
+    background-color: #ff8c00;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    margin: 0 10px;
+}
+
+.btn:hover {
+    background-color: #ff7000;
+}
+
+.categories, .about-us, .testimonials {
+    background-color: #f5e6d2;
+    padding: 2em;
+    margin: 1em auto;
+    width: 90%;
+    max-width: 1200px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.categories h2, .about-us h2, .testimonials h2 {
+    margin-top: 0;
+}
+
+.carousel {
+    display: flex;
+    overflow-x: auto;
+}
+
+.product-item {
+    flex: 0 0 auto;
+    width: 200px;
+    margin: 10px;
+    text-align: center;
+}
+
+.product-item img {
+    width: 100%;
+    height: auto;
+}
+
+.categories ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.categories li {
+    display: inline-block;
+    margin: 0 10px;
+    text-align: center;
+}
+
+.categories a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+}
+
+.categories img {
+    width: 100px; /* Adjust the size as needed */
+    height: 100px; /* Adjust the size as needed */
+    display: block;
+    margin: 0 auto 10px;
+}
+
+.about-us p, .testimonial-item p {
+    margin: 0.5em 0;
+}
+
+
+.about-us-content {
+    display: flex; /* Use flexbox for layout */
+    align-items: center;
+     /* Center items vertically */
+}
+
+.about-us-content img {
+    width: 250px; /* Adjust image width as needed */
+    height: auto; /* Maintain aspect ratio */
+    margin-right: 20px; /* Space between image and text */
+}
+
+
+.testimonials .testimonial-item {
+    background-color: #f9f9f9;
+    padding: 1em;
+    margin: 1em 0;
+    border-radius: 5px;
+}
+
+footer {
+    background-color: #f98e7d;
+    color: #fff;
+    text-align: center;
+    padding: 1em;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+.info{
+    border: 3px solid #f98e7d;
+    padding: 3rem 0.5rem 3rem  0.5rem;
+    border-radius: 10px;
+}

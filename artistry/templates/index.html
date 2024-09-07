@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Artistry</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/index.css') }}"
+    />
+  </head>
+  <body>
+    <header>
+      <h1>Artistry</h1>
+      <nav>
+        <a href="{{ url_for('shop') }}">Shop</a>
+        <a href="{{ url_for('login') }}">Login</a>
+        <a href="{{ url_for('register') }}">Register</a>
+        <a href="{{ url_for('index') }}">Cart</a>
+      </nav>
+    </header>
+    <div class="main-banner"></div>
+    <div class="categories">
+      <h2>Categories</h2>
+      <ul>
+        <li>
+          <a href="{{ url_for('shop', category_id=1) }}">
+            <img
+              src="static/css/images/jewellery.jpg"
+              alt="Jewellery"
+              style="width: 350px; height: 350px; margin: 10px"
+            />
+            Jewellery
+          </a>
+        </li>
+        <li>
+          <a href="{{ url_for('shop', category_id=2) }}">
+            <img
+              src="static/css/images/clothes.jpg"
+              alt="Clothing"
+              style="width: 350px; height: 350px; margin: 10px"
+            />
+            Clothing
+          </a>
+        </li>
+        <li>
+          <a href="{{ url_for('shop', category_id=3) }}">
+            <img
+              src="static/css/images/homedecor.jpg"
+              alt="Home Decor"
+              style="width: 350px; height: 350px; margin: 10px"
+            />
+            Home Decor
+          </a>
+        </li>
+      </ul>
+    </div>
+    <div class="about-us">
+      <h2>About Us</h2>
+      <div class="about-us-content">
+        <img src="static/css/images/aboutus.jpg" alt="About Us Image" />
+        <div class="info">
+          <p>
+            Welcome to Handmade Marketplace, your number one source for all
+            things handmade. We're dedicated to giving you the very best of
+            handmade products, with a focus on quality, uniqueness, and customer
+            service. Our mission is to connect talented artisans with customers
+            who appreciate craftsmanship and artistry. Whether you're looking
+            for jewellery, clothing, home decor, or unique gifts, we strive to
+            provide an exceptional shopping experience.
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="testimonials">
+      <h2>Testimonials</h2>
+      <div class="testimonial-item">
+        <p>
+          "I love the unique products on Handmade Marketplace. The quality is
+          top-notch and the artisans are very talented!"
+        </p>
+        <p>- Customer</p>
+      </div>
+      <div class="testimonial-item">
+        <p>
+          "Handmade Marketplace has helped me reach more customers and share my
+          craft with the world."
+        </p>
+        <p>- Artisan</p>
+      </div>
+    </div>
+    <footer>
+      <p>&copy; 2024 Handmade Marketplace</p>
+    </footer>
+  </body>
+</html>

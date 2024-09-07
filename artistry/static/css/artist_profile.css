@@ -1,0 +1,152 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f9c2a9;
+    margin: 0;
+    padding: 0;
+    animation: fadeIn 0.5s ease; /* Animation for fade-in effect */
+}
+
+header {
+    background-color: #f98e7d;
+    color: #fff;
+    padding: 1em;
+    text-align: center;
+    animation: slideDown 0.5s ease; /* Animation for slide-down effect */
+}
+
+header h1 {
+    margin: 0;
+    font-size: 1.5em;
+}
+
+nav {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: #b0422f; 
+    padding: 10px 0;
+  }
+  
+  nav a {
+    color: #fff;
+    margin: 0 1em;
+    text-decoration: none;
+  }
+
+nav a:hover {
+    color: #ff8c00; /* Change color on hover */
+}
+
+main {
+    padding: 1em;
+    animation: slideUp 0.5s ease; /* Animation for slide-up effect */
+}
+
+.artist-profile {
+    background-color: #fff;
+    padding: 2em;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    animation: scaleIn 0.5s ease; /* Animation for scaling effect */
+}
+
+.artist-profile h2 {
+    margin-top: 0;
+    color: #333;
+    font-size: 1.8em;
+}
+
+.product-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    animation: fadeIn 0.5s ease; /* Animation for fade-in effect */
+}
+
+.product-item {
+    border: 1px solid #ccc;
+    padding: 1em;
+    margin: 1em;
+    background-color: #fafafa;
+    width: 30%;
+    box-sizing: border-box;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.product-item:hover {
+    transform: translateY(-5px); /* Lift on hover */
+}
+
+.product-item h4 {
+    margin-top: 0;
+    color: #333;
+    font-size: 1.2em;
+}
+
+.product-item p {
+    margin: 0.5em 0;
+}
+
+.product-item a {
+    display: inline-block;
+    background-color: #ff8c00;
+    color: #fff;
+    padding: 8px 16px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.product-item a:hover {
+    background-color: #ff7000;
+}
+
+footer {
+    background-color: #f98e7d;
+    color: #fff;
+    text-align: center;
+    padding: 1em;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    animation: fadeIn 0.5s ease; /* Animation for fade-in effect */
+}
+
+/* Keyframes for animations */
+@keyframes slideDown {
+    from {
+        transform: translateY(-100%);
+    }
+    to {
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideUp {
+    from {
+        transform: translateY(100%);
+    }
+    to {
+        transform: translateY(0);
+    }
+}
+
+@keyframes scaleIn {
+    from {
+        transform: scale(0);
+    }
+    to {
+        transform: scale(1);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}

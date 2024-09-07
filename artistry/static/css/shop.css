@@ -1,0 +1,81 @@
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f9c2a9;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background-color: #f98e7d;
+  color: #161515;
+  padding: 1em;
+  text-align: left;
+  font-size: larger;
+}
+
+nav {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  background-color: #b0422f; 
+  padding: 10px 0;
+}
+
+nav a {
+  color: #fff;
+  margin: 0 1em;
+  text-decoration: none;
+}
+nav a:hover {
+  color: #ff8c00; /* Change color on hover */
+}
+
+
+.main-nav {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.main-nav .nav-item {
+  margin-right: 1em;
+}
+
+main {
+  padding: 2em;
+  background-color: #f5e6d2;
+}
+
+.product-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.product-item {
+  border: 1px solid #ccc;
+  padding: 1em;
+  margin: 1em;
+  background-color: #edbbbb;
+  width: 30%;
+  box-sizing: border-box;
+  text-align: center; /* Center align the content */
+}
+
+.product-item img {
+  max-width: 100%;
+  height: auto;
+  width: 100%; /* Ensure the image takes up full width of its container */
+  max-height: 300px; /* Set maximum height for consistent sizing */
+  object-fit: contain; /* Ensure the entire image fits within its container */
+}
+
+footer {
+  background-color: #f98e7d;
+  color: #fff;
+  text-align: center;
+  padding: 1em;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}

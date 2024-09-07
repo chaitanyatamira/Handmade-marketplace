@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/cart.css') }}">
+    <title>Cart</title>
+</head>
+<body>
+    <header>
+        <h1>Your Cart</h1>
+        <nav>
+            <a href="{{ url_for('index') }}">Home</a>
+            <a href="{{ url_for('shop') }}">Shop</a>
+            <a href="{{ url_for('login') }}">Login</a>
+            <a href="{{ url_for('register') }}">Register</a>
+           
+        </nav>
+    </header>
+    <main>
+        <div class="cart-container">
+            <h2>Your Cart</h2>
+            <ul class="cart-items">
+                {% for cart_item in cart_items %}
+                <li class="cart-item">
+                    <div class="item-info">
+                        <img src="{{ url_for('static', filename='images/product1.jpg') }}" alt="Product Image">
+                        <div class="item-details">
+                            <h3>{{ cart_item.product.name }}</h3>
+                            <p>Price: ${{ cart_item.product.price }}</p>
+                            <p>Quantity: {{ cart_item.quantity }}</p>
+                        </div>
+                    </div>
+                    <div class="item-actions">
+                        <!-- Form to remove product from cart -->
+                        <form action="{{ url_for('remove_from_cart', cart_item_id=cart_item.id) }}" method="post">
+                            <button class="btn-remove" type="submit">Remove</button>
+                        </form>
+                    </div>
+                </li>
+                {% endfor %}
+            </ul>
+            <div class="cart-summary">
+                <p>Total Items: {{ total_items }}</p>
+                <p>Total Price: ${{ total_price }}</p>
+            </div>
+            <a href="{{ url_for('payment') }}" class="btn-proceed">Proceed to Payment</a>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2024 Artisan Bazaar. All rights reserved.</p>
+    </footer>
+</body>
+</html>

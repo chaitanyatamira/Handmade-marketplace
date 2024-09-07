@@ -1,0 +1,75 @@
+<!-- shop.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/shop.css') }}"
+    />
+    <title>Shop</title>
+  </head>
+  <body>
+    <header>
+      <h1>Shop</h1>
+      <nav>
+        <a href="{{ url_for('index') }}">Home</a>
+
+        <a href="{{ url_for('cart') }}">Cart</a>
+        <a href="{{ url_for('login') }}">Login</a>
+        <a href="{{ url_for('register') }}">Register</a>
+      </nav>
+    </header>
+    <main>
+      <h2>All Products</h2>
+      <div class="product-list">
+        {% for product in products %}
+        <div class="product-item">
+          {% if product.name == "Handwoven Scarf" %}
+          <img
+            src="{{ url_for('static', filename='css/images/scarf.jpg') }}"
+            alt="{{ product.name }} image"
+          />
+          {% elif product.name == "Clay Pot" %}
+          <img
+            src="{{ url_for('static', filename='css/images/claypot.jpg') }}"
+            alt="{{ product.name }} image"
+          />
+          {% elif product.name == "Wooden Chair" %}
+          <img
+            src="{{ url_for('static', filename='css/images/woodenchair.jpg') }}"
+            alt="{{ product.name }} image"
+          />
+          {% elif product.name == "Embroidered Cushion Cover" %}
+          <img
+            src="{{ url_for('static', filename='css/images/cushioncover.jpg') }}"
+            alt="{{ product.name }} image"
+          />
+          {% elif product.name == "Ceramic Vase" %}
+          <img
+            src="{{ url_for('static', filename='css/images/vase.jpg') }}"
+            alt="{{ product.name }} image"
+          />
+          {% elif product.name == "Wooden Table" %}
+          <img
+            src="{{ url_for('static', filename='css/images/woodentable.jpg') }}"
+            alt="{{ product.name }} image"
+          />
+          {% endif %}
+          <h3>{{ product.name }}</h3>
+          <p>{{ product.description }}</p>
+          <p>Price: ${{ product.price }}</p>
+          <a href="{{ url_for('product_detail', product_id=product.id) }}"
+            >View Details</a
+          >
+        </div>
+        {% endfor %}
+      </div>
+    </main>
+    <footer>
+      <p>&copy; 2024 Artisan Bazaar. All rights reserved.</p>
+    </footer>
+  </body>
+</html>
